@@ -1,0 +1,8 @@
+<button
+  class="sk-iconbtn"
+  type="button"
+  (click)="theme.toggle()"
+  [attr.aria-label]="(theme.isDark$ | async) ? 'Switch to light mode' : 'Switch to dark mode'"
+>
+  {{ (theme.isDark$ | async) ? '☀️' : '🌙' }}
+</button>

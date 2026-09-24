@@ -1,0 +1,12 @@
+# Python
+backend/.venv/
+backend/.env
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+
+# Node / Angular
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/.env

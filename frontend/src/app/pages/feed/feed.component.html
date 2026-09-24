@@ -1,0 +1,29 @@
+<app-navbar />
+<main class="main-content">
+  <div class="feed-header">
+    <h2 class="grad-text">Deal Feed</h2>
+    <button class="btn-primary" type="button" (click)="openModal()">+ Post an Ask</button>
+  </div>
+
+  <app-filter-pills (filterChange)="onFilter($event)" />
+
+  <div *ngIf="loading" class="skeleton-list">
+    <div class="skeleton deal-card-skel" *ngFor="let _ of [1, 2, 3]"></div>
+  </div>
+
+  <div *ngIf="!loading && filteredDeals.length === 0" class="empty-state">
+    No deals yet for this filter.
+  </div>
+
+  <app-deal-card
+    *ngFor="let deal of filteredDeals; trackBy: trackById"
+    [deal]="deal"
+    class="fu"
+  />
+</main>
+
+<app-post-ask-modal
+  *ngIf="modalOpen"
+  (close)="closeModal()"
+  (created)="onDealCreated($event)"
+/>

@@ -1,0 +1,16 @@
+<div class="glass-card deal-card fu">
+  <div class="deal-top">
+    <div class="co-mark">{{ initials }}</div>
+    <div class="deal-title">
+      <strong>{{ deal.company }}</strong>
+      <span class="ft-pill" [class]="deal.type">{{ deal.type }}</span>
+    </div>
+  </div>
+  <div class="dtag">{{ deal.sector }}</div>
+  <p class="pitch">{{ deal.pitch }}</p>
+  <div class="deal-meta">
+    <span class="kv">Amount {{ formattedAmount }}</span>
+    <span class="kv" *ngIf="deal.type === 'equity'">Equity {{ deal.equity_pct }}%</span>
+    <span class="time">{{ timeAgo }}</span>
+  </div>
+</div>

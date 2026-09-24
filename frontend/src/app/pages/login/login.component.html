@@ -1,0 +1,21 @@
+<div class="login-wrap">
+  <div class="glass-card login-card">
+    <div class="logo-tile" aria-hidden="true">S</div>
+    <h1 class="grad-text">Welcome back</h1>
+    <p>Sign in to access the deal feed</p>
+
+    <form (ngSubmit)="onLogin()">
+      <label class="field-label" for="email">Email</label>
+      <input class="input" id="email" type="email" name="email" [(ngModel)]="email" autocomplete="username" />
+
+      <label class="field-label" for="password">Password</label>
+      <input class="input" id="password" type="password" name="password" [(ngModel)]="password" autocomplete="current-password" />
+
+      <div class="error-msg" *ngIf="error">{{ error }}</div>
+
+      <button class="btn-primary btn-full" type="submit" [disabled]="loading">
+        {{ loading ? 'Signing in...' : 'Sign in' }}
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+:root {
+  // ── Backgrounds ───────────────────────────────────────────
+  --bg-deep:   #070D17;   // Page root background
+  --bg:        #0B1420;   // Body background
+  --surface:   #13202E;   // Card / panel surface
+  --surface-2: #1B2A3C;   // Elevated surface, stat tiles
+  --s4:        #22324A;   // Deepest surface (select option bg)
+
+  // ── Brand Accent ──────────────────────────────────────────
+  --accent:    #3BA9EB;   // Brand blue — primary CTA, active states
+  --accent-2:  #5EBDFF;   // Lighter blue — gradient end, hover
+
+  // Accent with opacity (for backgrounds, shadows, borders)
+  --accent-10: rgba(59, 169, 235, 0.10);
+  --accent-22: rgba(59, 169, 235, 0.22);
+  --accent-44: rgba(59, 169, 235, 0.44);
+  --accent-88: rgba(59, 169, 235, 0.55);  // Used for glow shadows
+
+  // ── Text Ramp (WCAG 2.1 AA contrast-audited) ──────────────
+  // Contrast ratios against --bg-deep (#070D17):
+  --ink-hi: #E8EEF5;   // 14.9:1 — headings, primary body text
+  --ink-md: #A3AEC0;   //  8.3:1 — secondary labels, metadata
+  --ink-lo: #7C879B;   //  5.1:1 — placeholders, captions, timestamps
+
+  // ── Funding Type Semantic Colors ──────────────────────────
+  --equity:    #34D399;
+  --equity-bg: rgba(52, 211, 153, 0.12);
+  --equity-bd: rgba(52, 211, 153, 0.30);
+
+  --loan:    #FFD24A;
+  --loan-bg: rgba(255, 210, 74, 0.12);
+  --loan-bd: rgba(255, 210, 74, 0.30);
+
+  --grant:    #C084FC;
+  --grant-bg: rgba(192, 132, 252, 0.12);
+  --grant-bd: rgba(192, 132, 252, 0.30);
+
+  // ── Status / Utility Colors ───────────────────────────────
+  --premium: #F5A623;   // Gold — premium badge
+  --green:   #00D084;   // Success
+  --red:     #FF4757;   // Error / destructive
+  --gold:    #FFB300;   // Warning / boost
+  --orange:  #FF6A00;   // Accent warm
+
+  // ── Glass Surfaces ────────────────────────────────────────
+  --glass:   rgba(255, 255, 255, 0.04);  // Primary glass fill
+  --glass-2: rgba(255, 255, 255, 0.06);  // Slightly elevated glass
+
+  // ── Borders ───────────────────────────────────────────────
+  --rule:     rgba(255, 255, 255, 0.07);  // Default card border
+  --hairline: rgba(255, 255, 255, 0.05);  // Subtle dividers
+  --b1:       rgba(255, 255, 255, 0.07);
+  --b2:       rgba(255, 255, 255, 0.12);
+
+  // ── Border Radius ─────────────────────────────────────────
+  --r8:  8px;
+  --r12: 12px;
+  --r16: 16px;
+  --r22: 22px;
+  --r24: 24px;
+
+  // ── Motion ────────────────────────────────────────────────
+  --tr: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);  // Default transition
+
+  // ── Typography ────────────────────────────────────────────
+  --font-ui:      -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter',
+                  system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter',
+                  system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+[data-theme="light"] {
+  --bg-deep:   #F0F4FA;
+  --bg:        #FFFFFF;
+  --surface:   #EBF2FC;
+  --surface-2: #DDE8F5;
+
+  --ink-hi: #0D1B2A;
+  --ink-md: #3D5068;
+  --ink-lo: #6B7F96;
+
+  --glass:   rgba(255, 255, 255, 0.70);
+  --glass-2: rgba(255, 255, 255, 0.85);
+  --rule:    rgba(59, 169, 235, 0.15);
+  --hairline: rgba(59, 169, 235, 0.08);
+  --b1:      rgba(59, 169, 235, 0.12);
+  --b2:      rgba(59, 169, 235, 0.20);
+}

@@ -1,0 +1,93 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.022em;
+}
+
+body {
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: var(--ink-hi);
+  background: var(--bg);
+}
+
+.grad-text {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.micro {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-md);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(620px 460px at -8% -10%,  rgba(59, 169, 235, 0.28), transparent 70%),
+    radial-gradient(560px 460px at 110% 110%, rgba(142, 168, 255, 0.22), transparent 70%),
+    radial-gradient(420px 360px at 130% 35%,  rgba(59, 169, 235, 0.14), transparent 72%),
+    var(--bg-deep);
+  filter: blur(0.5px);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(120% 80% at 50% 0%, transparent 0%, rgba(7, 13, 23, 0.55) 70%);
+}
+
+[data-theme="light"] body::before {
+  background:
+    radial-gradient(620px 460px at -8% -10%,  rgba(59, 169, 235, 0.12), transparent 70%),
+    radial-gradient(560px 460px at 110% 110%, rgba(142, 168, 255, 0.10), transparent 70%),
+    #F0F4FA;
+}
+
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 2px; }
+::selection { background: var(--surface-2); color: var(--accent); }
+
+.skeleton {
+  background: linear-gradient(90deg, var(--surface) 25%, var(--surface-2) 50%, var(--surface) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: var(--r8);
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+@keyframes fadeUp   { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn   { from { opacity: 0; } to { opacity: 1; } }
+@keyframes scaleIn  { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: scale(1); } }
+@keyframes slideDown{ from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes spin     { to   { transform: rotate(360deg); } }
+
+.fu { animation: fadeUp 0.45s ease both; }
+.fi { animation: fadeIn 0.3s ease both; }
+.si { animation: scaleIn 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) both; }

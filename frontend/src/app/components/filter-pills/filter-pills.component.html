@@ -1,0 +1,6 @@
+<div class="pills-row">
+  <button class="pill" type="button" [class.active]="active === 'all'" (click)="select('all')">All</button>
+  <button class="pill" type="button" [class.active]="active === 'equity'" (click)="select('equity')">Equity</button>
+  <button class="pill" type="button" [class.active]="active === 'loan'" (click)="select('loan')">Loan</button>
+  <button class="pill" type="button" [class.active]="active === 'grant'" (click)="select('grant')">Grant</button>
+</div>

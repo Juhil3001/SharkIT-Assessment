@@ -1,0 +1,27 @@
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-tile {
+  color: #0b1420;
+  font-weight: 700;
+}
+
+.nav-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-sm {
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
