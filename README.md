@@ -2,7 +2,7 @@
 
 Investor deal feed. Founders post an equity, loan, or grant ask. Investors sign in, filter the feed, and see a new ask at the top without a reload.
 
-**Live URL:** added after the Netlify deploy.
+**Live URL:** https://sharkit-assessment.netlify.app
 
 **Demo login:** `demo@sharkit.in` / `SharkIT@2024`
 
